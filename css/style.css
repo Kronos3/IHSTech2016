@@ -771,3 +771,14 @@ img:hover
   font-size: 20px;
   color: #FFF;
 }
+
+.ex > a,
+.ex > ul,
+.ex > ul > li > a
+{
+  background-color: #620000 !important;
+}
+
+.ex > ul > li:hover > a
+{
+  background-color: #FFF !important;
