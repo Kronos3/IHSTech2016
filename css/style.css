@@ -18,7 +18,7 @@ body
 body,input,textarea,select
 {
   font-family: 'Palatino Linotype';
-  font-size: 11pt;
+  font-size: 14pt;
   font-weight: 300;
   line-height: 1.75em;
   color: #777;
@@ -31,7 +31,7 @@ h1,h2,h3,h4,h5,h6,p
   color: #333;
 }
 
-h2
+h1
 {
   letter-spacing: -0.025em;
   font-size: 50px;
@@ -155,6 +155,18 @@ ul.style .first
 {
   height: 100%;
 }
+
+#header
+{
+  background: url(../images/header.jpg) no-repeat center fixed;
+  transform-origin: top left;
+  -webkit-background-size: cover;
+  -webkit-height: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 #header:before
 {
   content: "";
@@ -163,15 +175,7 @@ ul.style .first
   position: absolute;
   top: 0;
   left: 0;
-  background: url(../images/header.jpg) no-repeat center fixed;
   z-index: -1;
-  transform-origin: top left;
-  -webkit-filter: blur(3px) grayscale(70%);
-  -webkit-background-size: cover;
-  -webkit-height: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 /* Nav: Navigation bar at top of page */
@@ -179,9 +183,9 @@ ul.style .first
 #back
 {
   position: fixed;
-  z-index: 1;
+  z-index: 20;
   width: 100%;
-  height: 77px;
+  height: 82px;
   background-color: rgba(255,255,255,0);
   -webkit-transition: background-color .3s; /* Safari */
   transition: background-color .3s;
@@ -189,7 +193,7 @@ ul.style .first
 
 #nav
 {
-  z-index: 30;
+  z-index: 3;
 }
 
 #nav-wrapper
@@ -228,7 +232,7 @@ ul.style .first
 
 #nav > ul > li > a
 {
-  color: #000;
+  color: #FFF;
   display: inline-block;
   vertical-align: middle;
   width: 200px;
@@ -242,16 +246,6 @@ ul.style .first
   overflow: hidden;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-}
-
-#nav > ul > li > a:hover
-{
-  color: #FFF
-}
-
-#nav > ul > li.active > a
-{
-  color: #FFF
 }
 
 .menu-parent a,
@@ -384,7 +378,7 @@ ul.style .first
   margin-bottom: 10%;
   position: relative;
   height: 60%;
-  z-index: -1;
+  z-index: 4;
 }
 
 .full #logo
@@ -392,7 +386,6 @@ ul.style .first
   margin-top: 25%;
 }
 
-.full .container,
 .full
 {
   height: 100% !important;
@@ -401,7 +394,7 @@ ul.style .first
 #logo h1
 {
   z-index: -1;
-  color: #000;
+  color: #FFF;
 }
 
 #logo a
@@ -414,7 +407,7 @@ ul.style .first
   font-weight: 500;
   line-height: 1em;
   font-size: 4em;
-  color: #000;
+  color: #FFF;
   letter-spacing: -0.05em;
   margin: 0 0 0.125em 0;
 }
@@ -714,38 +707,60 @@ img:hover
 
 .contents
 {
-  position: fixed;
-  right: 0;
-  bottom: 10%;
-  width: 15%;
-  list-style: none;
+  list-style-type: none;
   padding: 20px;
-  padding-left: 20px;
+  width: 100%;
   background: #c7c7c7;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+  z-index: 2;
+  display: table;
+  text-align: center;
+  padding-left: 0px !important;
 }
 
-.contents h1
+#con
 {
-  padding: 0;
-  padding-bottom: 10px;
-  margin: 0;
-  text-align: left;
+  -webkit-transition: all 0.25s ease-in-out;
+}
+
+.contents li
+{
+  display:inline-block;
+  text-align: center;
+  margin: 5px;
 }
 
 .contents a
 {
+  font-family: Sans-Serif;
   margin: 0 auto;
   text-align: center;
+  display: block;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.contents i
+{
+  padding-left: 3px;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  opacity: 0;
+}
+
+.contents a:hover
+{
+  background-color: #FFF;
+  color: #000;
+}
+
+.contents a:hover > i
+{
+  opacity: 1;
 }
 
 .external
 {
   position: absolute;
   z-index: 10;
-  margin: 15px;
-  margin-top: 80px;
   float: left;
   border-radius: 5px;
 }
@@ -770,7 +785,7 @@ img:hover
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 200%;
+  width: 150%;
   padding-top: 20px;
   padding-left: 10px;
   padding-bottom: 10px;
@@ -785,12 +800,72 @@ img:hover
   color: #FFF;
 }
 
+.main-content
+{
+  float: center;
+  text-align: center;
+  z-index: 10;
+}
+
+#motto
+{
+  padding: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #008c8c; /* add color */
+}
+
+#motto *
+{
+  display: block;
+}
+
+#creed
+{
+  padding: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #182e47;
+}
+
+#creed *
+{
+  color: #FFF;
+  display: block;
+}
+
+#community
+{
+  padding: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #93e3ec;
+}
+
+#community *
+{
+  display: block;
+}
+
+#officers
+{
+  padding: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #333;
+}
+
+#officers *
+{
+  color: #FFF;
+  display: block;
+}
+
 .ex > a,
 .ex > ul,
 .ex > ul > li > a
 {
   background-color: #620000 !important;
-  color: #FFF !important;
 }
 
 .ex > a
