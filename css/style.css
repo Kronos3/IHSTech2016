@@ -55,9 +55,10 @@ strong, b
   color: #000;
 }
 
-.pennant
+.pennant > img
 {
-  color: #333;
+  width: 200px;
+  height: 200px;
 }
 
 /* Links */
