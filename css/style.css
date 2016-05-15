@@ -672,7 +672,6 @@ hr
 img
 {
   width: 300px;
-  height: 100%;
   -webkit-transition: opacity 0.25s ease-in-out;
   opacity: 1;
   border-radius: 4px;
