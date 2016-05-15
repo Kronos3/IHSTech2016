@@ -2,7 +2,7 @@ $(document).ready(function(){
     var scroll_pos = 0;
     $(document).scroll(function() { 
         scroll_pos = $(this).scrollTop();
-        if(scroll_pos > 200) {
+        if(scroll_pos > -1) {
             $("#back").css('background-color', '#585858');
         }
         else {
@@ -26,13 +26,11 @@ $(window).ready(function()
 $(window).scroll(function() {
     wS = $(window).scrollTop();
     if ( wS < hT ){
-        console.log ( wS + "<" + ( hT + hH ) );
         $("#con").css('top', '0px');
         $("#con").css('position', 'relative');
     }
     else {
-        console.log ( wS + ">" + ( hT + hH ) );
-        $("#con").css('top', '82px');
+        $("#con").css('top', '72px');
         $("#con").css('position', 'fixed');
     }
 });
