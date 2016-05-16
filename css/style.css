@@ -27,6 +27,17 @@ body
   text-indent: -40px !important;
 }
 
+.al-left h1
+{
+  padding-bottom:30px;
+}
+
+.al-left p
+{
+  text-align: left;
+  text-indent: 40px;
+}
+
 body,input,textarea,select
 {
   font-family: 'Droid Sans';
